@@ -31,5 +31,5 @@ The DRQ (Deep learning based Remote sensing of Discharge) method represents an a
 ## Pretrained Model
 Pretrained weights can be downloaded from [here](https://zenodo.org/records/10130554).
 
-## Citation and Contact
-For citing our work, refer to the research paper. For inquiries or collaboration, contact [haozhenuk@gmail.com].
+## Contact
+For inquiries, contact [haozhenuk@gmail.com].
