@@ -29,7 +29,7 @@ The DRQ (Deep learning based Remote sensing of Discharge) method represents an a
 - `numpy==1.23.5`
 
 ## Pretrained Model
-Pretrained weights can be downloaded from [here](https://zenodo.org/records/10130554).
+Pretrained weights can be downloaded from [here](https://zenodo.org/records/11139143).
 
 ## Contact
 For inquiries, contact [haozhenuk@gmail.com].
