@@ -2,6 +2,7 @@ from model import *
 from utils import *
 import rasterio
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 
 def get_model(reload_path):
@@ -56,7 +57,7 @@ def get_prediction(model_input, model, input_days_length, overlapping_days_lengt
         raise ValueError("overlapping_days_length should be less than input_days_length.")
 
     input = model_input['input'].cuda()
-    length = input.size(1)
+    length = input.shape[1]
     pred_qs = [[] for _ in range(length)]
     prev_pred = None
 
@@ -64,7 +65,7 @@ def get_prediction(model_input, model, input_days_length, overlapping_days_lengt
 
     step_size = input_days_length - overlapping_days_length
 
-    for i in list(range(0, length - input_days_length + 1, step_size)):
+    for i in tqdm(list(range(0, length - input_days_length + 1, step_size))):
         tmp_input = input[:, i:i + input_days_length, :, :, :]
         tmp_pred = model(tmp_input).detach().cpu().numpy().squeeze()
         tmp_pred = transform_pred_func(tmp_pred)
@@ -149,7 +150,7 @@ def get_model_input(tif_files, input_size=64):
     return {'input': input}
 
 
-def process_reach(tif_files, q_mean):
+def process_reach(tif_files, q_mean, model):
     '''
     :param tif_files: list of tif files for a river reach, each file should contain "blue", "green", "red", "nir", "swir1", "swir2", and "qa" bands in that order
     :param q_mean: long term mean of the discharge
@@ -165,7 +166,7 @@ def process_reach(tif_files, q_mean):
 
 
 if __name__ == '__main__':
-    model = get_model(reload_path='./DRQ_vCloud_2023_10_11_14_58.pth')
+    model = get_model(reload_path='./DRQ_vCloud_0.01_2024_04_23_17_14.pth')
 
     dir_path = './Landsat'
     tif_files = absoluteFilePaths(dir_path)
