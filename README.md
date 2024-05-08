@@ -6,7 +6,7 @@ The DRQ (Deep learning based Remote sensing of Discharge) method represents an a
 ### Key Features
 - Utilizes reflectance data for discharge estimation in narrow rivers.
 - Advanced Transformer architecture for enhanced accuracy.
-- Median correlation score of 0.6 validated on 494 gauges with median river width 67m.
+- Median correlation score of 0.6, validated using 494 gauges with a median river width of 67 m.
 
 ## Contents
 - `main.py`: Executes the DRQ algorithm.
