@@ -25,9 +25,7 @@ def get_model(reload_path):
     InverseQModel.load_state_dict(new_state_dict)
     InverseQModel = InverseQModel.cuda()
     InverseQModel.eval()
-
-    print(f'Number of trainable parameters (Millions): {count_parameters(InverseQModel) / 1e6}')
-
+    
     return InverseQModel
 
 
