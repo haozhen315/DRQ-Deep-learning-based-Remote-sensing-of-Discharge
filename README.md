@@ -1,7 +1,7 @@
 # Remote sensing of river discharge from medium-resolution satellite imagery based on deep learning
 
 ## Overview
-The DRQ (Deep learning based Remote sensing of Discharge) method represents an advancement in remote sensing of river discharge (RSQ). Traditional RSQ methods, such as Mass Conserved Flow Law Inversion (McFLI), often struggle with accuracy, especially in estimating the width of narrow rivers from medium-resolution images. DRQ addresses these limitations by using reflectance data instead of width measurements, making it particularly effective for narrow rivers (<40m). The method employs an advanced Transformer architecture to map river discharge directly from time-series reflectance imagery, providing more density and accuracy in inversed discharge compared to McFLI-based methods.
+The DRQ (Deep learning based Remote sensing of Discharge) method represents an advancement in remote sensing of river discharge (RSQ). Traditional RSQ methods, such as Mass Conserved Flow Law Inversion (McFLI), often struggle with accuracy, especially in estimating the width of narrow rivers from medium-resolution images. DRQ addresses these limitations by using reflectance data instead of width measurements, making it particularly effective for narrow rivers (<60m). The method employs an advanced Transformer architecture to map river discharge directly from time-series reflectance imagery, providing more density and accuracy in inversed discharge compared to McFLI-based methods.
 
 ### Key Features
 - Utilizes reflectance data for discharge estimation in narrow rivers.
