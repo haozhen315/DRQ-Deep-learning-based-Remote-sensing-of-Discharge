@@ -14,7 +14,7 @@ The DRQ (Deep learning based Remote sensing of Discharge) method represents an a
 - `utils.py`: Supporting utility functions.
 
 ## Usage
-1. **Landsat Files Preparation**: Ensure files include "blue", "green", "red", "nir", "swir1", "swir2", and "qa" bands. (blue, green, red, nir, swir1, swir2, qa = rasterio.open(tif_file).read()) The image should be at least 64 pixels wide, and ensure the river is centered in the image.
+1. **Landsat Files Preparation**: Ensure files include "blue", "green", "red", "nir", "swir1", "swir2", and "qa" bands. For example, from GEE Landsat 9 TOA: https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_TOA. (blue, green, red, nir, swir1, swir2, qa = rasterio.open(tif_file).read()) The image should be at least 64 pixels wide, and ensure the river is centered in the image.
 2. **File Organization**: Group Landsat files for the same river reach in one folder.
 
 ## Notes
